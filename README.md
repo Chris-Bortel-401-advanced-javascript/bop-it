@@ -31,6 +31,7 @@
     <Buttons>
     <Counter>
   </GameView>
+</App>
   
 
 
