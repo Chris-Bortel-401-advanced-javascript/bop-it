@@ -37,7 +37,6 @@
 
 
 
-
 Redux Store:
   - Reducers
     - state
