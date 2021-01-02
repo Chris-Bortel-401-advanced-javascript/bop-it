@@ -2,16 +2,15 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import GameButtons from './buttons.js'
 // import GameFront from './src/components/gameFront/gameFront.js'
+import StartScreen from './startScreen.js'
+// import GameButtons from './buttons.js'
 
 export default function GameFront() {
   return (
-// If count negative 1 render start screen 
-// otherwise render game buttons
-      <GameButtons />
-      //if correct do the increment
-// on game button if incorrect, set count -1, display you lose
+//if suych start screen 
+// if not render gamscreen
+      <StartScreen />
 );
 }
 
@@ -33,3 +32,8 @@ const styles = StyleSheet.create({
 //     // < Game />
 //   )
 // }
+// If count negative 1 render start screen 
+// otherwise render game buttons
+
+//if correct do the increment
+// on game button if incorrect, set count -1, display you lose

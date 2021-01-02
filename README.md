@@ -147,3 +147,8 @@ Redux Store:
 - [Scaffolding](https://github.com/Chris-Bortel-401-advanced-javascript/bop-it/pull/2)
 
 
+- Pseudo For Buttons
+// If count negative 1 render start screen 
+// otherwise render game buttons
+//if correct do the increment
+// on game button if incorrect, set count -1, display you lose
