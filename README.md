@@ -53,7 +53,8 @@ Game Plan:
 
   - Q: Where will will we handle the vibrate? Buttons?
 
-
+## UML 
+![Bop It UML](./bop-it-uml.png)
 
 ```
 <App>
@@ -63,22 +64,66 @@ Game Plan:
     <Counter>
   </GameView>
 </App>
-  
+  Initial State
+    s:prompt === BopIt to begin
+    s:buttonDisplay === Bop-it
+    s:button === Bop-it
+    s:count === -1
+    
+    a:setButtons
+    a:changePrompt
+      f:randomize
+      f:increment
+    a:reset to initial 
+
+    <gamebuttoin 
+    - dispatches action with value of button
+    - reducer check for what value will be 
+
+
+
+
+
+
+
+
 
 
 Redux Store:
   - Reducers
 
-    s:initial
-    s:active
-    s:count
-    s:
-    a:active
-    a:reset to initial 
-    a:randomize
-    a:increment
 
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <Prompt />
     // Displays prompts
       - s: initialState --- Press 'Bop-It' to begin
@@ -100,6 +145,5 @@ Redux Store:
 ```
 ## Pull Requests Url
 - [Scaffolding](https://github.com/Chris-Bortel-401-advanced-javascript/bop-it/pull/2)
-## UML 
-![Bop It UML](./bop-it-uml.png)
+
 

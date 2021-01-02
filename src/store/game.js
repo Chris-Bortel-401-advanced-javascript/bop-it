@@ -8,3 +8,8 @@
 // a:reset to initial 
 // a:randomize
 // a:increment
+
+const initialState = {
+  //startScreen
+  //
+}
