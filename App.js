@@ -1,6 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
+// import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+// import { StyleSheet, Text, View } from 'react-native';
 import GameFront from './src/components/gameFront/gameFront.js'
 
 export default function App() {
