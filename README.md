@@ -35,6 +35,14 @@ Write an ``App`` component that serves as the container for all sub-components o
   - A ``<Counter>`` component
     - Keeps score.    
 ### What we need ?
+Game Plan:
+- redux
+  - index.js
+  - gameReducer.js
+- gameFront.js
+  - wire 
+
+
 - Static buttons and a way to change the state
 - Randomizer that changes the prompt on correct gesture
   - Where should the gesture be connected to the prompts? --- on correct gesture, we want to tell the prompt to change. 
@@ -45,7 +53,8 @@ Write an ``App`` component that serves as the container for all sub-components o
 
   - Q: Where will will we handle the vibrate? Buttons?
 
-
+## UML 
+![Bop It UML](./bop-it-uml.png)
 
 ```
 <App>
@@ -55,11 +64,66 @@ Write an ``App`` component that serves as the container for all sub-components o
     <Counter>
   </GameView>
 </App>
-  
+  Initial State
+    s:prompt === BopIt to begin
+    s:buttonDisplay === Bop-it
+    s:button === Bop-it
+    s:count === -1
+    
+    a:setButtons
+    a:changePrompt
+      f:randomize
+      f:increment
+    a:reset to initial 
+
+    <gamebuttoin 
+    - dispatches action with value of button
+    - reducer check for what value will be 
+
+
+
+
+
+
+
+
 
 
 Redux Store:
   - Reducers
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <Prompt />
     // Displays prompts
       - s: initialState --- Press 'Bop-It' to begin
@@ -79,5 +143,7 @@ Redux Store:
       - s: score:0
 
 ```
-![Bop It UML](./bop-it-uml.png)
+## Pull Requests Url
+- [Scaffolding](https://github.com/Chris-Bortel-401-advanced-javascript/bop-it/pull/2)
+
 
