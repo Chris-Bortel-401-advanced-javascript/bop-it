@@ -35,6 +35,14 @@ Write an ``App`` component that serves as the container for all sub-components o
   - A ``<Counter>`` component
     - Keeps score.    
 ### What we need ?
+Game Plan:
+- redux
+  - index.js
+  - gameReducer.js
+- gameFront.js
+  - wire 
+
+
 - Static buttons and a way to change the state
 - Randomizer that changes the prompt on correct gesture
   - Where should the gesture be connected to the prompts? --- on correct gesture, we want to tell the prompt to change. 
@@ -60,6 +68,17 @@ Write an ``App`` component that serves as the container for all sub-components o
 
 Redux Store:
   - Reducers
+
+    s:initial
+    s:active
+    s:count
+    s:
+    a:active
+    a:reset to initial 
+    a:randomize
+    a:increment
+
+
     <Prompt />
     // Displays prompts
       - s: initialState --- Press 'Bop-It' to begin
