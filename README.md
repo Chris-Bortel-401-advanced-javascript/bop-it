@@ -79,5 +79,8 @@ Redux Store:
       - s: score:0
 
 ```
+## Pull Requests Url
+- [Scaffolding](https://github.com/Chris-Bortel-401-advanced-javascript/bop-it/pull/2)
+## UML 
 ![Bop It UML](./bop-it-uml.png)
 
