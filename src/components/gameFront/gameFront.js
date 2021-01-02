@@ -4,15 +4,14 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+
+import GameButtons from './buttons.js'
 // import GameFront from './src/components/gameFront/gameFront.js'
 
 export default function GameFront() {
   return (
-    <View style={styles.container}>
-      <Text>Game Front
-      </Text>
-      <StatusBar style="auto" />
-    </View>
+
+      <GameButtons />
   );
 }
 
