@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Button, Text, View } from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
 import * as actions from '../../store/game.js';
@@ -19,16 +19,27 @@ export default function GamePlay() {
 
     return (
     <View style={styles.container}>
-    <Text>
+    <Text h2>
         
-        <h2>Count: {count}</h2>
-        <h2>{prompts}</h2>
-        {/* <h2>{randomPrompt}</h2> */}
-        <button onClick={() => handleClick()}>Bop it</button>
-        {/* <button onclick={randomPrompt}>Bop it</button> */}
-        <button>Swipe It</button>
-        <button>Shake It</button>
+      Count: {count}
+        {/* <h2>{prompts}</h2> */}
     </Text>
+    <Text h2>
+        {prompts}
+    </Text>
+        <Button
+        title="Bop It"
+        onPress={() => handleClick()}
+    />
+        <Button
+        title="Swipe It"
+        onPress={() => handleClick()}
+    />
+        <Button
+        title="Shake It"
+        onPress={() => handleClick()}
+    />
+    
     <StatusBar style="auto" />
     </View>
     );

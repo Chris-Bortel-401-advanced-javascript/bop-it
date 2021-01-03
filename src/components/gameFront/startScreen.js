@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Button, Text, View } from 'react-native';
 
 import * as gameReducers from '../../store/game.js';
 
-export default function startButton() {
+export default function StartScreen() {
     const dispatch = useDispatch();
     // const count = useSelector( state => state.game.count )
 
@@ -14,10 +14,12 @@ export default function startButton() {
     }
     return (
     <View style={styles.container}>
-       <Text>
-         <button onClick={handleCorrect}>Bop it</button>
-       </Text>
-       <StatusBar style="auto" />
+    <Button
+        title="Bop It"
+        onPress={() => handleCorrect()}
+    />
+        
+    <StatusBar style="auto" />
     </View>
     );
 }
