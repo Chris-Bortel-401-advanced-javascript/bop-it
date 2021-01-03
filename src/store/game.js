@@ -1,5 +1,10 @@
 const initialState = {
-  count: -1
+  count: -1,
+  prompts: [
+    'Bop It',
+    'Shake It',
+    'Swipe It'
+  ]
   //startScreen
   //
 }

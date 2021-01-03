@@ -20,7 +20,7 @@ export default function GameFront() {
               <Else>
                 <GamePlay />
               </Else>
-            </If>
+      </If>
       
     </>
 );
