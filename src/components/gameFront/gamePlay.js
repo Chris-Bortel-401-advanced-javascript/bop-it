@@ -1,23 +1,31 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
-import Prompts from './prompts.js'
+import * as actions from '../../store/game.js';
 
 export default function GamePlay() {
     const count = useSelector( state => state.game.count )
     const prompts = useSelector( state => state.game.prompts )
+    const dispatch = useDispatch();
+    
 
-    let randomPrompt = prompts[Math.floor(Math.random() * prompts.length)];
+        
+    function handleClick() {
+        dispatch(actions.randomize())
+        console.log('clicked')
+    }
 
     return (
     <View style={styles.container}>
     <Text>
         
         <h2>Count: {count}</h2>
-        <h2>{randomPrompt}</h2>
-        <button>Bop it</button>
+        <h2>{prompts}</h2>
+        {/* <h2>{randomPrompt}</h2> */}
+        <button onClick={() => handleClick()}>Bop it</button>
+        {/* <button onclick={randomPrompt}>Bop it</button> */}
         <button>Swipe It</button>
         <button>Shake It</button>
     </Text>
