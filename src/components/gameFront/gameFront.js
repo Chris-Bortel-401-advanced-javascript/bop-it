@@ -2,20 +2,18 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {If, Else, Then} from 'react-if';
-
+import {useSelector} from 'react-redux';
 // import GameFront from './src/components/gameFront/gameFront.js'
 import StartScreen from './startScreen.js'
 import GamePlay from './gamePlay.js'
 
-const initialState = {
-  count: -1 //startScreen
-  //
-}
 
 export default function GameFront() {
+  const count = useSelector( state => state.game.count )
+
   return (
     <>
-      <If condition={initialState.count >= 0}>
+      <If condition={count < 0}>
               <Then>
                 <StartScreen />
               </Then>

@@ -10,7 +10,7 @@ const reducer = combineReducers({
 })
 
 const store = () => {
-  return createStore(reducer, composeWithDevTools);
+  return createStore(reducer, composeWithDevTools());
 } 
 
 export default store();
