@@ -9,13 +9,17 @@ import Prompts from './prompts.js'
 export default function GamePlay() {
     const count = useSelector( state => state.game.count )
     const prompts = useSelector( state => state.game.prompts )
+    const currentPrompt = useSelector( state => state.game.currentPrompt )
     const dispatch = useDispatch();
-    
-
         
-    function handleClick() {
-        dispatch(actions.increment())
-        console.log('clicked')
+    function handleClick(button) {
+        if(currentPrompt === button){
+            dispatch(actions.increment())
+            dispatch(actions.randomize())
+        } else {
+            dispatch(actions.reset())
+        }
+
     }
 
     return (
@@ -25,23 +29,23 @@ export default function GamePlay() {
     <Prompts />
     </Text>
 
-    <Text h2>
-        
-      Count: {count}
-        {/* <h2>{prompts}</h2> */}
+    <Text h2>       
+    Count: {count}
     </Text>
-  
+
         <Button
         title="Bop It"
-        onPress={() => handleClick()}
+        
+        onPress={() => handleClick("Bop It")}
     />
         <Button
         title="Swipe It"
-        onPress={() => handleClick()}
+        onPress={() => handleClick("Swipe It")}
     />
         <Button
         title="Shake It"
-        onPress={() => handleClick()}
+      
+        onPress={() => handleClick("Shake It")}
     />
     
     <StatusBar style="auto" />

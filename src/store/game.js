@@ -1,6 +1,9 @@
+const randomPrompt = ['Swipe It', 'Bop It', 'Shake It']
+
 const initialState = {
   count: -1,
-  prompts: ['Swipe It', 'Bop It', 'Shake It']
+  prompts: ['Swipe It', 'Bop It', 'Shake It'],
+  currentPrompt: randomPrompt[Math.floor(Math.random() * randomPrompt.length)]
   
   
   //startScreen
@@ -8,7 +11,7 @@ const initialState = {
 }
 
 export default function reducer(state=initialState, action){
-  const { type, payload } = action;
+  const { type } = action;
 
   switch(type){
     case 'INCREMENT':
@@ -18,9 +21,12 @@ export default function reducer(state=initialState, action){
       case 'RANDOMIZE':
         console.log(state)
         return {...state,
-          prompts: state.prompts
-          // [Math.floor(Math.random() * prompts.length)]
+          currentPrompt: randomPrompt[Math.floor(Math.random() * randomPrompt.length)]
         }
+        case 'RESET':
+          return {...state,
+            count: -1
+          }
     default:
       return state
   }
@@ -28,16 +34,20 @@ export default function reducer(state=initialState, action){
 
 
 
-export const increment = (addOne) => {
+export const increment = () => {
   return{
     type: 'INCREMENT',
-    payload: addOne
   }
 }
 
-export const randomize = (addOne) => {
+export const randomize = () => {
   return{
     type: 'RANDOMIZE',
-    payload: addOne
+  }
+}
+
+export const reset = () => {
+  return{
+    type: 'RESET',
   }
 }
