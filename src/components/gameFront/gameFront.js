@@ -1,16 +1,30 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import {If, Else, Then} from 'react-if';
 
 // import GameFront from './src/components/gameFront/gameFront.js'
 import StartScreen from './startScreen.js'
-// import GameButtons from './buttons.js'
+import GamePlay from './gamePlay.js'
+
+const initialState = {
+  count: -1 //startScreen
+  //
+}
 
 export default function GameFront() {
   return (
-//if suych start screen 
-// if not render gamscreen
-      <StartScreen />
+    <>
+      <If condition={initialState.count >= 0}>
+              <Then>
+                <StartScreen />
+              </Then>
+              <Else>
+                <GamePlay />
+              </Else>
+            </If>
+      
+    </>
 );
 }
 

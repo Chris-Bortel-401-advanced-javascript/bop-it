@@ -3,13 +3,17 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 
-export default function startButton() {
+export default function GamePlay() {
     return (
     <View style={styles.container}>
-       <Text>
-         <button>Bop it</button>
-       </Text>
-       <StatusBar style="auto" />
+    <Text>
+        <h1>Prompt</h1>
+        <h2> Count</h2>
+        <button>Bop it</button>
+        <button>Swipe It</button>
+        <button>Shake It</button>
+    </Text>
+    <StatusBar style="auto" />
     </View>
     );
 }
