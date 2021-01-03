@@ -4,10 +4,9 @@ import { StyleSheet, Text, View } from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
 import * as actions from '../../store/game.js';
-
+import Prompts from './prompts.js'
 export default function GamePlay() {
     const count = useSelector( state => state.game.count )
-    const prompts = useSelector( state => state.game.prompts )
     const dispatch = useDispatch();
     
 
@@ -20,11 +19,11 @@ export default function GamePlay() {
     return (
     <View style={styles.container}>
     <Text>
-        
+        <Prompts />
         <h2>Count: {count}</h2>
-        <ul>
+        {/* <ul>
           {prompts[Math.floor(Math.random() * prompts.length)]}
-        </ul>
+        </ul> */}
         {/* <h2>{randomPrompt}</h2> */}
         <button onClick={() => handleClick()}>Bop it</button>
         {/* <button onclick={randomPrompt}>Bop it</button> */}
