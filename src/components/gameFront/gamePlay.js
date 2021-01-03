@@ -5,6 +5,7 @@ import {useDispatch, useSelector} from 'react-redux';
 
 import * as actions from '../../store/game.js';
 
+import Prompts from './prompts.js'
 export default function GamePlay() {
     const count = useSelector( state => state.game.count )
     const prompts = useSelector( state => state.game.prompts )
@@ -13,20 +14,23 @@ export default function GamePlay() {
 
         
     function handleClick() {
-        dispatch(actions.randomize())
+        dispatch(actions.increment())
         console.log('clicked')
     }
 
     return (
     <View style={styles.container}>
+    <Text>
+        
+    <Prompts />
+    </Text>
+
     <Text h2>
         
       Count: {count}
         {/* <h2>{prompts}</h2> */}
     </Text>
-    <Text h2>
-        {prompts}
-    </Text>
+  
         <Button
         title="Bop It"
         onPress={() => handleClick()}
