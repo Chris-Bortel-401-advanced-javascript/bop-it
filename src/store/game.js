@@ -1,7 +1,11 @@
 const initialState = {
   count: -1,
-  prompts: ['Swipe It', 'Bop It', 'Shake It']
-  
+  prompts: [
+    'bop it',
+  'swipe it',
+'shake it'
+    
+  ]  
   
   //startScreen
   //
@@ -16,10 +20,10 @@ export default function reducer(state=initialState, action){
         count: state.count +1
       }
       case 'RANDOMIZE':
-        console.log(state)
-        return {...state,
-          prompts: state.prompts
-          // [Math.floor(Math.random() * prompts.length)]
+        console.log('Fucking State',state)
+        return {...state, prompts: state.prompts
+      
+         
         }
     default:
       return state

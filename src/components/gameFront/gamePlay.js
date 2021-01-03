@@ -22,7 +22,9 @@ export default function GamePlay() {
     <Text>
         
         <h2>Count: {count}</h2>
-        <h2>{prompts}</h2>
+        <ul>
+          {prompts[Math.floor(Math.random() * prompts.length)]}
+        </ul>
         {/* <h2>{randomPrompt}</h2> */}
         <button onClick={() => handleClick()}>Bop it</button>
         {/* <button onclick={randomPrompt}>Bop it</button> */}
