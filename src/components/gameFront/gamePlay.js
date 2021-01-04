@@ -5,10 +5,9 @@ import {useDispatch, useSelector} from 'react-redux';
 
 import * as actions from '../../store/game.js';
 
-import Prompts from './prompts.js'
+
 export default function GamePlay() {
     const count = useSelector( state => state.game.count )
-    const prompts = useSelector( state => state.game.prompts )
     const currentPrompt = useSelector( state => state.game.currentPrompt )
     const dispatch = useDispatch();
         
@@ -19,14 +18,12 @@ export default function GamePlay() {
         } else {
             dispatch(actions.reset())
         }
-
     }
 
     return (
     <View style={styles.container}>
-    <Text>
-        
-    <Prompts />
+    <Text h1>
+        {currentPrompt}
     </Text>
 
     <Text h2>       
@@ -38,13 +35,16 @@ export default function GamePlay() {
         
         onPress={() => handleClick("Bop It")}
     />
+      
+
         <Button
         title="Swipe It"
         onPress={() => handleClick("Swipe It")}
     />
+     
         <Button
         title="Shake It"
-      
+
         onPress={() => handleClick("Shake It")}
     />
     

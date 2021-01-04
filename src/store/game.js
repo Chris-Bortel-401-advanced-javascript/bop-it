@@ -5,9 +5,6 @@ const initialState = {
   prompts: ['Swipe It', 'Bop It', 'Shake It'],
   currentPrompt: randomPrompt[Math.floor(Math.random() * randomPrompt.length)]
   
-  
-  //startScreen
-  //
 }
 
 export default function reducer(state=initialState, action){
@@ -31,8 +28,6 @@ export default function reducer(state=initialState, action){
       return state
   }
 }
-
-
 
 export const increment = () => {
   return{

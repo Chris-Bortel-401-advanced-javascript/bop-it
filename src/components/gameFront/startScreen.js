@@ -1,13 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-import { StyleSheet, Button, Text, View } from 'react-native';
+import {useDispatch} from 'react-redux';
+import { StyleSheet, Button, View } from 'react-native';
 
 import * as gameReducers from '../../store/game.js';
 
 export default function StartScreen() {
     const dispatch = useDispatch();
-    // const count = useSelector( state => state.game.count )
 
     function handleCorrect() {
         dispatch(gameReducers.increment())

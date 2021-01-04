@@ -1,3 +1,9 @@
+## Research
+- how to use class method in our functional component
+- research overview of gestures and how to use them
+- find a package that does the gestures for us?
+
+
 # Startscreen file stage 1
 Bop it button that says press play
 
