@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Vibration} from 'react-native';
+import {Vibration, Alert} from 'react-native';
 
 import {useDispatch, useSelector} from 'react-redux';
 import * as actions from '../../store/game.js';
@@ -16,6 +16,7 @@ function handleClick(button) {
         dispatch(actions.randomize())
     } else {
         Vibration.vibrate([100,200,100]);
+        Alert.alert('Game over, please play again')
         dispatch(actions.reset())
     }
 }

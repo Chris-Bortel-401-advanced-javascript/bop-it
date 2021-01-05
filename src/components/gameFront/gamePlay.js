@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Button, Vibration, Text, View } from 'react-native';
+import { StyleSheet, Button, Vibration, Alert, Text, View } from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import * as actions from '../../store/game.js';
 import RnSwipeButton from './rnSwipeButton';
@@ -16,6 +16,7 @@ export default function GamePlay() {
             dispatch(actions.randomize())
         } else {
             Vibration.vibrate([100,200,100]);
+            Alert.alert('Game over, please play again');
             dispatch(actions.reset())
 
         }
