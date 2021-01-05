@@ -2,9 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Button, Text, View } from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
-
 import * as actions from '../../store/game.js';
-
+import RnSwipeButton from './rnSwipeButton';
 
 export default function GamePlay() {
     const count = useSelector( state => state.game.count )
@@ -35,13 +34,13 @@ export default function GamePlay() {
         
         onPress={() => handleClick("Bop It")}
     />
-      
+      <RnSwipeButton />
 
-        <Button
+        {/* <Button
         title="Swipe It"
         onPress={() => handleClick("Swipe It")}
-    />
-     
+    /> */}
+    
         <Button
         title="Shake It"
 
