@@ -11,13 +11,15 @@ export default function StartScreen() {
     function handleCorrect() {
         dispatch(gameReducers.increment())
     }
+
     return (
+
     <View style={styles.container}>
     <Text h1 style={styles.welcome}>
     Press
     </Text>
+    
     <View style={styles.bopitButton}>
-
     <Button
         title="Bop It"
         color="#f5f6fa"
@@ -28,6 +30,7 @@ export default function StartScreen() {
     <Text h1 style={styles.welcome}>
     To Begin
     </Text> 
+    
     <StatusBar style="auto" />
     </View>
     );

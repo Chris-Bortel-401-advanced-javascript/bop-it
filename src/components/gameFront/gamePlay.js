@@ -35,18 +35,16 @@ export default function GamePlay() {
         <Button
         title="Bop It"
         color="#f5f6fa"
-        
-        
         onPress={() => handleClick("Bop It")}
         />
         </View>
+        
         <RnSwipeButton />
 
         <View style={styles.shakeitButton}>
         <Button 
         title="Shake It"
         color="#f5f6fa"
-
         onPress={() => handleClick("Shake It")}
         />
     </View>

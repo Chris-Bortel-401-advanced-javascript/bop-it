@@ -16,7 +16,6 @@ export default function reducer(state=initialState, action){
         count: state.count +1
       }
       case 'RANDOMIZE':
-        console.log(state)
         return {...state,
           currentPrompt: randomPrompt[Math.floor(Math.random() * randomPrompt.length)]
         }
