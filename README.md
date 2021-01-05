@@ -34,6 +34,10 @@ Write an ``App`` component that serves as the container for all sub-components o
     
   - A ``<Counter>`` component
     - Keeps score.    
+
+## Technology
+- [rn-swipe-button](https://www.npmjs.com/package/rn-swipe-button)
+  - This is working but giving us a bunch of compilation errors on the web browser.
 ### What we need ?
 Game Plan:
 - redux
