@@ -34,6 +34,10 @@ Write an ``App`` component that serves as the container for all sub-components o
     
   - A ``<Counter>`` component
     - Keeps score.    
+
+## Technology
+- [rn-swipe-button](https://www.npmjs.com/package/rn-swipe-button)
+  - This is working but giving us a bunch of compilation errors on the web browser.
 ### What we need ?
 Game Plan:
 - redux
@@ -147,3 +151,8 @@ Redux Store:
 - [Scaffolding](https://github.com/Chris-Bortel-401-advanced-javascript/bop-it/pull/2)
 
 
+- Pseudo For Buttons
+// If count negative 1 render start screen 
+// otherwise render game buttons
+//if correct do the increment
+// on game button if incorrect, set count -1, display you lose
